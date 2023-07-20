@@ -1,3 +1,6 @@
+; COMP 2825 Group Project
+; Summer 2023 term
+
 SYS_EXIT  equ 1
 SYS_READ  equ 3
 SYS_WRITE equ 4
@@ -90,7 +93,6 @@ _start:
    mov edx, 2        
    int 0x80
 
-   ; print newline
    mov eax, SYS_WRITE        
    mov ebx, STDOUT
    mov ecx, msg_newline        
@@ -117,7 +119,6 @@ single_digit:
    mov edx, 1        
    int 0x80
 
-   ; print newline
    mov eax, SYS_WRITE        
    mov ebx, STDOUT
    mov ecx, msg_newline        
